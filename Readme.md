@@ -44,27 +44,5 @@ sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 Install some Python dependencies and Selenium:
 
-# Install pip:
-sudo apt-get install python-pip
-
-## (Optional) Create and enter a virtual environment:
-# sudo apt-get install python-virtualenv
-# virtualenv env
-# source env/bin/activate
-
-# Install Selenium and pyvirtualdisplay:
-pip install pyvirtualdisplay selenium
-Now, we can do stuff like this with Selenium in Python:
-
-from pyvirtualdisplay import Display
-from selenium import webdriver
-
-display = Display(visible=0, size=(800, 600))
-display.start()
-driver = webdriver.Chrome()
-driver.get('http://christopher.su')
-print driver.title
-Footnotes
-1: You can find all the ChromeDriver releases here. If you’re using a 32-bit system or a non-Linux OS, the ChromeDriver download used above won’t work.
 
 
