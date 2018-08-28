@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('git clone'){
+           steps{
+                withMaven(maven:'Maven home'){
+                sh 'mvn clean compile'
+                }
+            }
+        }
+        stage('testing'){
+            steps{
+                    withMaven(maven:'Maven home'){
+                    sh 'mvn test'
+                }
+            }
+        }
+
+
+    }
+
+}
